@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Main.aspx.cs" Inherits="Screenie.Main" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="Screenie.WebForm1" %>
 
 <!DOCTYPE html>
 
@@ -9,9 +9,6 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <center>
-                <h1>Registration successfull!</h1>
-            </center>
         </div>
     </form>
 </body>

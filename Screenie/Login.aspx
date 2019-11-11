@@ -24,7 +24,7 @@
              <img class="auto-style1" src="assets/icon/screenie_icon.png"/>
              <h1 style="margin-top:24px; font-family:Roboto; font-size:40px; font-weight:300; color: rgba(0, 0, 0, 1); -webkit-font-smoothing: antialiased;text-align:center;">Screenie</h1>
              <h2 style="margin-top:24px; font-family:Roboto; font-size:16px; color: rgba(0, 0, 0, 1); font-weight: 200; line-height: 1.2;text-align:center;">Instantly connect with people in your life.</h2>
-             <h2 style="margin-top:24px;margin-bottom:24px; font-family:Roboto; font-size:16px; color: rgba(0, 0, 0, 1); font-weight: 200; line-height: 1.2;text-align:center;">Sign in to get started.</h2>
+             <h2 style="margin-top:20px; margin-bottom:24px; font-family:Roboto; font-size:16px; color: rgba(0, 0, 0, 1); font-weight: 200; line-height: 1.2;text-align:center;">Sign in to get started.</h2>
             </center>
          </div>
         
@@ -46,7 +46,7 @@
                              </div>
                          </div>                        
                         <div class="form-group">
-                           <asp:Button class="btn btn-primary btn-block btn-lg" type="button" ID="Button1" runat="server" Text="Login" />
+                           <asp:Button class="btn btn-primary btn-block btn-lg" type="button" ID="Button1" runat="server" Text="Login" OnClick="Button1_Click" />
                         </div>   
                          <div align="center">
                              <a href="Register.aspx">Creat an account?</a><br>

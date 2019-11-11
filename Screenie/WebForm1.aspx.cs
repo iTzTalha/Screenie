@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Screenie
 {
-    public partial class Main : System.Web.UI.Page
+    public partial class WebForm1 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

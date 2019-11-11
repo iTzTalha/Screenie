@@ -24,8 +24,10 @@
                   </div>
                   <div class="row" style="margin-bottom:24px;">
                      <div class="col">
-                        <center>
-                          <a href="Register.aspx">Upload profile</a>
+                        <center>                       
+                            <div class="form-group">                                                      
+                              <input type="file" class="form-control-file" id="exampleFormControlFile1" style="margin-top:6px; margin-left:125px">
+                            </div>
                         </center>
                      </div>
                   </div>

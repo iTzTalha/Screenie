@@ -15,7 +15,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div style="background-image: url('assets/img/bg@2x.jpg'); height: 800px;">
+        <div style="background-image: url('assets/img/bg@2x.jpg'); width:100%; height: 800px;">
 
              <nav class="navbar navbar-expand-lg navbar-light">
                  <br />
@@ -50,7 +50,7 @@
             </div>
 
          <footer>
-                <p style="margin-left:240px; padding-bottom:5px; font-family: Roboto; font-size: 14px; color: #999999;" >&copy Screenie 2019. The Apple and Google Play logos are trademarks of their respective owners.View our <strong style="color:rgba(0, 0, 0, 0.8);">Data Policy</strong> and <strong style="color:rgba(0, 0, 0, 0.8);">Terms</strong>.</p>
+                <p style="margin-left:300px; padding-bottom:5px; font-family: Roboto; font-size: 14px; color: #999999;" >&copy Screenie 2019. The Apple and Google Play logos are trademarks of their respective owners.View our <strong style="color:rgba(0, 0, 0, 0.8);">Data Policy</strong> and <strong style="color:rgba(0, 0, 0, 0.8);">Terms</strong>.</p>
          </footer>
 
     </form>

@@ -11,7 +11,7 @@ namespace Screenie
 {
 
 
-    public partial class Main
+    public partial class WebForm1
     {
 
         /// <summary>
