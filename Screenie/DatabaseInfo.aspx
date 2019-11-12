@@ -23,7 +23,7 @@
                          <asp:LinkButton class="nav-link" ID="LinkButton4" runat="server" Font-Bold="True" Font-Names="Roboto" Font-Overline="False" ForeColor="#737373" Width="100%" OnClick="LinkButton4_Click">Delete Users</asp:LinkButton>
                      </p>
 
-                      <p style="margin-top:20px;margin-left:930px;"> 
+                      <p style="margin-top:20px;margin-left:1090px;"> 
                          <asp:LinkButton class="nav-link" ID="LinkButton2" runat="server" Font-Bold="True" Font-Names="Roboto" Font-Overline="False" ForeColor="#737373" Width="100%" OnClick="LinkButton2_Click">Logout</asp:LinkButton>
                      </p>
 
@@ -31,14 +31,21 @@
             </nav>
         </div>
 
-        <div style="margin-top:100px">
-             <asp:GridView ID="gvUsers" runat="server" <%--CssClass="container table-bordered"--%> AutoGenerateColumns="false" ShowFooter="true" DataKeyNames="RegistrationID" ShowHeaderWhenEmpty="true" OnRowCommand="gvUsers_RowCommand" OnRowEditing="gvUsers_RowEditing" OnRowCancelingEdit="gvUsers_RowCancelingEdit" OnRowUpdating="gvUsers_RowUpdating" OnRowDeleting="gvUsers_RowDeleting">
+         <div align="center">
+             </br>
+            <asp:Label ID="successmessage" runat="server" Text="" ForeColor="Green"></asp:Label>
+            <asp:Label ID="errormessage" runat="server" Text="" ForeColor="Red"></asp:Label>
+            </div>
+
+
+        <div style="margin-top:25px">
+             <asp:GridView ID="gvUsers" runat="server" CssClass="container table-bordered" cellpadding="10" AutoGenerateColumns="false" ShowFooter="true" DataKeyNames="RegistrationID" ShowHeaderWhenEmpty="true" OnRowCommand="gvUsers_RowCommand" OnRowEditing="gvUsers_RowEditing" OnRowCancelingEdit="gvUsers_RowCancelingEdit" OnRowUpdating="gvUsers_RowUpdating" OnRowDeleting="gvUsers_RowDeleting">
 
                   <%-- Theme Properties --%>
                 <FooterStyle BackColor="White" ForeColor="#000066" />
-                <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
+                <HeaderStyle HorizontalAlign="center" BackColor="#006AFF" Font-Bold="True" ForeColor="White" />
                 <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
-                <RowStyle ForeColor="#000066" />
+                <RowStyle HorizontalAlign="center" ForeColor="#000066"/>
                 <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
                 <SortedAscendingCellStyle BackColor="#F1F1F1" />
                 <SortedAscendingHeaderStyle BackColor="#007DBB" />
@@ -137,12 +144,6 @@
             </Columns>
 
         </asp:GridView>
-
-            </br>
-            <asp:Label ID="successmessage" runat="server" Text="" ForeColor="Green"></asp:Label>
-
-            </br>
-            <asp:Label ID="errormessage" runat="server" Text="" ForeColor="Red"></asp:Label>
 
         </div>
 

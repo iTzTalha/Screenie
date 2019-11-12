@@ -107,7 +107,7 @@ namespace Screenie
                 using (SqlConnection con = new SqlConnection(strcon))
                 {
                     con.Open();
-                    String query = "DELETE FROM Registration RegistratonID=@id";
+                    String query = "DELETE FROM Registration WHERE RegistrationID = @id";
                     SqlCommand sqlcomd = new SqlCommand(query, con);
                     sqlcomd.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[e.RowIndex].Value.ToString()));
                     sqlcomd.ExecuteNonQuery();
@@ -130,7 +130,7 @@ namespace Screenie
                 using (SqlConnection con = new SqlConnection(strcon))
                 {
                     con.Open();
-                    String query = "UPDATE Registration SET Username=@Username,Email=@Email,Birth_Date=@Birth_Date,Gender=@Gender,Password=@Password WHERE RegistratonID=@id";
+                    String query = "UPDATE Registration SET Username=@Username,Email=@Email,Birth_Date=@Birth_Date,Gender=@Gender,Password=@Password WHERE RegistrationID=@id";
                     SqlCommand sqlcomd = new SqlCommand(query, con);
                     sqlcomd.Parameters.AddWithValue("@Username", (gvUsers.Rows[e.RowIndex].FindControl("txtUsername") as TextBox).Text.Trim());
                     sqlcomd.Parameters.AddWithValue("@Email", (gvUsers.Rows[e.RowIndex].FindControl("txtEmail") as TextBox).Text.Trim());
