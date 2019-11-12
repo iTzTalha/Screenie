@@ -30,18 +30,30 @@ namespace Screenie
                 }
                 SqlCommand cmd = new SqlCommand("select * from Registration where Email='" + TextBox1.Text.Trim() + "' AND Password='" + TextBox2.Text.Trim() + "'", con);
                 SqlDataReader dr = cmd.ExecuteReader();
+                String admin = TextBox1.Text.ToString();
+                String adminPass = TextBox2.Text.ToString();
                 if (dr.HasRows)
                 {
-                    while (dr.Read())
+                    if(admin == "admin@white.com" && adminPass == "admin")
                     {
-                        Response.Write("<script>alert('Login successful');</script>");
+                        while (dr.Read())
+                        {
+                            Response.Redirect("DatabaseInfo.aspx");
+                        }
                     }
+                    else
+                    {
+                        while (dr.Read())
+                        {
+                            Response.Write("<script>alert('Login successful');</script>");
+                        }
+                    }
+                    
                 }
                 else
                 {
                     Response.Write("<script>alert('Invalid credentials');</script>");
                 }
-
             }
             catch (Exception ex)
             {
