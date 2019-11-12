@@ -32,7 +32,7 @@
         </div>
 
         <div style="margin-top:100px">
-             <asp:GridView ID="gvUsers" runat="server" CssClass="container table-bordered" AutoGenerateColumns="false" ShowFooter="true" DataKeyNames="UserID" ShowHeaderWhenEmpty="true" OnRowCommand="gvUsers_RowCommand" OnRowEditing="gvUsers_RowEditing" OnRowCancelingEdit="gvUsers_RowCancelingEdit" OnRowUpdating="gvUsers_RowUpdating" OnRowDeleting="gvUsers_RowDeleting">
+             <asp:GridView ID="gvUsers" runat="server" <%--CssClass="container table-bordered"--%> AutoGenerateColumns="false" ShowFooter="true" DataKeyNames="UserID" ShowHeaderWhenEmpty="true" OnRowCommand="gvUsers_RowCommand" OnRowEditing="gvUsers_RowEditing" OnRowCancelingEdit="gvUsers_RowCancelingEdit" OnRowUpdating="gvUsers_RowUpdating" OnRowDeleting="gvUsers_RowDeleting">
 
                   <%-- Theme Properties --%>
                 <FooterStyle BackColor="White" ForeColor="#000066" />
@@ -56,61 +56,61 @@
 
                 <asp:TemplateField HeaderText="Username">
                     <ItemTemplate>
-                        <asp:Label Text='<%#Eval("Username") %>' runat="server"></asp:Label>
+                        <asp:Label Text='<%# Eval("Username") %>' runat="server"/>
                     </ItemTemplate>
                     <EditItemTemplate>
-                        <asp:TextBox ID="txtUsername" Text='<%#Eval("Username") %>' runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtUsername" Text='<%# Eval("Username") %>' runat="server"/>
                     </EditItemTemplate>
                     <FooterTemplate>
-                        <asp:TextBox ID="txtUsernameFooter" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtUsernameFooter" runat="server"/>
                     </FooterTemplate>
                 </asp:TemplateField>
 
                  <asp:TemplateField HeaderText="Email">
                     <ItemTemplate>
-                        <asp:Label Text='<%#Eval("Email") %>' runat="server"></asp:Label>
+                        <asp:Label Text='<%# Eval("Email") %>' runat="server"/>
                     </ItemTemplate>
                     <EditItemTemplate>
-                        <asp:TextBox ID="txtEmail" Text='<%#Eval("Email") %>' runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtEmail" Text='<%# Eval("Email") %>' runat="server"/>
                     </EditItemTemplate>
                     <FooterTemplate>
-                        <asp:TextBox ID="txtEmailFooter" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtEmailFooter" runat="server"/>
                     </FooterTemplate>
                 </asp:TemplateField>
 
                  <asp:TemplateField HeaderText="Date of birth">
                     <ItemTemplate>
-                        <asp:Label Text='<%#Eval("Birth_Date") %>' runat="server"></asp:Label>
+                        <asp:Label Text='<%# Eval("Birth_Date") %>' runat="server"/>
                     </ItemTemplate>
                     <EditItemTemplate>
-                        <asp:TextBox ID="txtBirthDate" Text='<%#Eval("Birth_Date") %>' runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtBirthDate" Text='<%# Eval("Birth_Date") %>' runat="server"/>
                     </EditItemTemplate>
                     <FooterTemplate>
-                        <asp:TextBox ID="txtBirthDateFooter" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtBirthDateFooter" runat="server"/>
                     </FooterTemplate>
                 </asp:TemplateField>
 
                  <asp:TemplateField HeaderText="Gender">
                     <ItemTemplate>
-                        <asp:Label Text='<%#Eval("Gender") %>' runat="server"></asp:Label>
+                        <asp:Label Text='<%# Eval("Gender") %>' runat="server"/>
                     </ItemTemplate>
                     <EditItemTemplate>
-                        <asp:TextBox ID="txtGender" Text='<%#Eval("Gender") %>' runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtGender" Text='<%# Eval("Gender") %>' runat="server"/>
                     </EditItemTemplate>
                     <FooterTemplate>
-                        <asp:TextBox ID="txtGenderFooter" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtGenderFooter" runat="server"/>
                     </FooterTemplate>
                 </asp:TemplateField>
 
                  <asp:TemplateField HeaderText="Password">
                     <ItemTemplate>
-                        <asp:Label Text='<%#Eval("Password") %>' runat="server"></asp:Label>
+                        <asp:Label Text='<% #Eval("Password") %>' runat="server"/>
                     </ItemTemplate>
                     <EditItemTemplate>
-                        <asp:TextBox ID="txtPassword" Text='<%#Eval("Password") %>' runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtPassword" Text='<%# Eval("Password") %>' runat="server"/>
                     </EditItemTemplate>
                     <FooterTemplate>
-                        <asp:TextBox ID="txtPasswordFooter" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtPasswordFooter" runat="server"/>
                     </FooterTemplate>
                 </asp:TemplateField>
 

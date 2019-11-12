@@ -35,13 +35,11 @@ namespace Screenie
 
         void populateGridView()
         {
-            try
-            {
                 DataTable dtbl = new DataTable();
                 using (SqlConnection con = new SqlConnection(strcon))
                 {
                     con.Open();
-                    SqlDataAdapter sqladater = new SqlDataAdapter("SELECT * FROM Registration", con);
+                    SqlDataAdapter sqladater = new SqlDataAdapter("SELECT * from Registration", con);
                     sqladater.Fill(dtbl);
                 }
                 if(dtbl.Rows.Count > 0)
@@ -59,13 +57,7 @@ namespace Screenie
                     gvUsers.Rows[0].Cells[0].ColumnSpan = dtbl.Columns.Count;
                     gvUsers.Rows[0].Cells[0].Text = "No data Found...!";
                     gvUsers.Rows[0].Cells[0].HorizontalAlign = HorizontalAlign.Center;
-                }
-                
-            }
-            catch
-            {
-
-            }
+                }         
         }
 
         protected void gvUsers_RowCommand(object sender, GridViewCommandEventArgs e)
@@ -76,7 +68,7 @@ namespace Screenie
                 {
                     SqlConnection con = new SqlConnection(strcon);
                     con.Open();
-                    String query = "INSERT INTO Registration (Username,Email,Birth_Date,Gender,Password) VALUES(@Username,@Email,@Birth_Date,@Gender,@Password)";
+                    String query = "INSERT INTO Registration (Username,Email,Birth_Date,Gender,Password) VALUES (@Username,@Email,@Birth_Date,@Gender,@Password)";
                     SqlCommand sqlcomd = new SqlCommand(query, con);
                     sqlcomd.Parameters.AddWithValue("@Username", (gvUsers.FooterRow.FindControl("txtUsernameFooter") as TextBox).Text.Trim());
                     sqlcomd.Parameters.AddWithValue("@Email", (gvUsers.FooterRow.FindControl("txtEmailFooter") as TextBox).Text.Trim());
