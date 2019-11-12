@@ -32,5 +32,20 @@ namespace Screenie
             Response.Write("<script>alert('User Deleted Successfully!');</script>");
             con.Close();
         }
+
+        protected void LinkButton4_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Delete.aspx");
+        }
+
+        protected void LinkButton2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Login.aspx");
+        }
+
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("DatabaseInfo.aspx");
+        }
     }
 }

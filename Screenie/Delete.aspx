@@ -10,32 +10,47 @@
     <script src="bootstrap/js/jquery-3.3.1.slim.min.js"></script>
     <script src="bootstrap/js/popper.min.js"></script>
 </head>
-<body>
+<body style="height: 100%">
     <form id="form1" runat="server">
-        <div style="margin-top:100px;">
-           <div class="container">
-               
-      <div class="row">
-         <div class="col-md-4 mx-auto">                       
-                  <div class="row">
-                     <div class="col">
-                        <div class="form-group">
-                            <div style="margin-bottom:4px">
-                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox10" ErrorMessage="*Please enter the Correct Email address." ForeColor="Red"></asp:RequiredFieldValidator>
+
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <p style="margin-top: 20px; margin-left: 30px;">
+                        <asp:LinkButton class="nav-link" ID="LinkButton1" runat="server" Font-Bold="True" Font-Names="Roboto" Font-Overline="False" ForeColor="#737373" Width="100%" OnClick="LinkButton1_Click">View Users</asp:LinkButton>
+                    </p>
+
+                    <p style="margin-top: 20px; margin-left: 30px;">
+                        <asp:LinkButton class="nav-link" ID="LinkButton4" runat="server" Font-Bold="True" Font-Names="Roboto" Font-Overline="False" ForeColor="#737373" Width="100%" OnClick="LinkButton4_Click">Delete Users</asp:LinkButton>
+                    </p>
+
+                    <p style="margin-top: 20px; margin-left: 930px;">
+                        <asp:LinkButton class="nav-link" ID="LinkButton2" runat="server" Font-Bold="True" Font-Names="Roboto" Font-Overline="False" ForeColor="#737373" Width="100%" OnClick="LinkButton2_Click">Logout</asp:LinkButton>
+                    </p>
+
+                </div>
+            </nav>
+        </div>
+
+        <div style="margin-top: 140px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 mx-auto">
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">                                  
+                                    <asp:TextBox Class="form-control form-control-lg" ID="TextBox10" runat="server" placeholder="Email address" Width="100%"></asp:TextBox>
+                                </div>                              
+                                <div class="form-group">
+                                    <asp:Button class="btn btn-primary btn-block btn-lg" type="button" ID="Button1" runat="server" Text="Delete" OnClick="Button1_Click" />
+                                </div>
+                                <h2 style="margin-top: 24px; font-family: Roboto; font-size: 16px; color: rgba(0, 0, 0, 1); font-weight: 200; line-height: 1.2; text-align: center;">Please enter the correct email address, once you hit the delete button the respective user will be deleted permanently.</h2>
                             </div>
-                           
-                            
-                            <asp:TextBox Class="form-control form-control-lg" ID="TextBox10" runat="server" placeholder="Email address" Width="100%"></asp:TextBox>
-                        </div>                                             
-                        <div class="form-group">
-                           <asp:Button class="btn btn-primary btn-block btn-lg" type="button" ID="Button1" runat="server" Text="Delete" OnClick="Button1_Click" />
-                        </div>                          
-                     </div>
-                  </div>
-               </div>
-            </div> 
-         </div>
-   
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </form>
 </body>
