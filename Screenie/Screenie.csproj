@@ -67,6 +67,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Screenie_Registration.mdf" />
+    <Content Include="App_Data\Screenie_Registration_log.ldf">
+      <DependentUpon>Screenie_Registration.mdf</DependentUpon>
+    </Content>
     <Content Include="assets\icon\add.png" />
     <Content Include="assets\icon\android.png" />
     <Content Include="assets\icon\apple.png" />

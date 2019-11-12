@@ -32,7 +32,7 @@
         </div>
 
         <div style="margin-top:100px">
-             <asp:GridView ID="gvUsers" runat="server" <%--CssClass="container table-bordered"--%> AutoGenerateColumns="false" ShowFooter="true" DataKeyNames="UserID" ShowHeaderWhenEmpty="true" OnRowCommand="gvUsers_RowCommand" OnRowEditing="gvUsers_RowEditing" OnRowCancelingEdit="gvUsers_RowCancelingEdit" OnRowUpdating="gvUsers_RowUpdating" OnRowDeleting="gvUsers_RowDeleting">
+             <asp:GridView ID="gvUsers" runat="server" <%--CssClass="container table-bordered"--%> AutoGenerateColumns="false" ShowFooter="true" DataKeyNames="RegistrationID" ShowHeaderWhenEmpty="true" OnRowCommand="gvUsers_RowCommand" OnRowEditing="gvUsers_RowEditing" OnRowCancelingEdit="gvUsers_RowCancelingEdit" OnRowUpdating="gvUsers_RowUpdating" OnRowDeleting="gvUsers_RowDeleting">
 
                   <%-- Theme Properties --%>
                 <FooterStyle BackColor="White" ForeColor="#000066" />
