@@ -31,19 +31,120 @@
             </nav>
         </div>
 
-        <asp:GridView ID="gvUsers" runat="server" CssClass="container" AutoGenerateColumns="false">
+        <div style="margin-top:100px">
+             <asp:GridView ID="gvUsers" runat="server" CssClass="container table-bordered" AutoGenerateColumns="false" ShowFooter="true" DataKeyNames="UserID" ShowHeaderWhenEmpty="true" OnRowCommand="gvUsers_RowCommand" OnRowEditing="gvUsers_RowEditing" OnRowCancelingEdit="gvUsers_RowCancelingEdit" OnRowUpdating="gvUsers_RowUpdating" OnRowDeleting="gvUsers_RowDeleting">
+
+                  <%-- Theme Properties --%>
+                <FooterStyle BackColor="White" ForeColor="#000066" />
+                <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
+                <RowStyle ForeColor="#000066" />
+                <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
+                <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                <SortedAscendingHeaderStyle BackColor="#007DBB" />
+                <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                <SortedDescendingHeaderStyle BackColor="#00547E" />
+               
 
             <Columns>
 
-                <asp:BoundField DataField="Username" HeaderText="Username" />
+               <%-- <asp:BoundField DataField="Username" HeaderText="Username"/>
                 <asp:BoundField DataField="Email" HeaderText="Email" />
-                <asp:BoundField DataField="Bith_Date" HeaderText="Birth Date" />
+                <asp:BoundField DataField="Birth_Date" HeaderText="Birth Date" />
                 <asp:BoundField DataField="Gender" HeaderText="Gender" />
-                <asp:BoundField DataField="Password" HeaderText="Password" />
+                <asp:BoundField DataField="Password" HeaderText="Password" />--%>
+
+                <asp:TemplateField HeaderText="Username">
+                    <ItemTemplate>
+                        <asp:Label Text='<%#Eval("Username") %>' runat="server"></asp:Label>
+                    </ItemTemplate>
+                    <EditItemTemplate>
+                        <asp:TextBox ID="txtUsername" Text='<%#Eval("Username") %>' runat="server"></asp:TextBox>
+                    </EditItemTemplate>
+                    <FooterTemplate>
+                        <asp:TextBox ID="txtUsernameFooter" runat="server"></asp:TextBox>
+                    </FooterTemplate>
+                </asp:TemplateField>
+
+                 <asp:TemplateField HeaderText="Email">
+                    <ItemTemplate>
+                        <asp:Label Text='<%#Eval("Email") %>' runat="server"></asp:Label>
+                    </ItemTemplate>
+                    <EditItemTemplate>
+                        <asp:TextBox ID="txtEmail" Text='<%#Eval("Email") %>' runat="server"></asp:TextBox>
+                    </EditItemTemplate>
+                    <FooterTemplate>
+                        <asp:TextBox ID="txtEmailFooter" runat="server"></asp:TextBox>
+                    </FooterTemplate>
+                </asp:TemplateField>
+
+                 <asp:TemplateField HeaderText="Date of birth">
+                    <ItemTemplate>
+                        <asp:Label Text='<%#Eval("Birth_Date") %>' runat="server"></asp:Label>
+                    </ItemTemplate>
+                    <EditItemTemplate>
+                        <asp:TextBox ID="txtBirthDate" Text='<%#Eval("Birth_Date") %>' runat="server"></asp:TextBox>
+                    </EditItemTemplate>
+                    <FooterTemplate>
+                        <asp:TextBox ID="txtBirthDateFooter" runat="server"></asp:TextBox>
+                    </FooterTemplate>
+                </asp:TemplateField>
+
+                 <asp:TemplateField HeaderText="Gender">
+                    <ItemTemplate>
+                        <asp:Label Text='<%#Eval("Gender") %>' runat="server"></asp:Label>
+                    </ItemTemplate>
+                    <EditItemTemplate>
+                        <asp:TextBox ID="txtGender" Text='<%#Eval("Gender") %>' runat="server"></asp:TextBox>
+                    </EditItemTemplate>
+                    <FooterTemplate>
+                        <asp:TextBox ID="txtGenderFooter" runat="server"></asp:TextBox>
+                    </FooterTemplate>
+                </asp:TemplateField>
+
+                 <asp:TemplateField HeaderText="Password">
+                    <ItemTemplate>
+                        <asp:Label Text='<%#Eval("Password") %>' runat="server"></asp:Label>
+                    </ItemTemplate>
+                    <EditItemTemplate>
+                        <asp:TextBox ID="txtPassword" Text='<%#Eval("Password") %>' runat="server"></asp:TextBox>
+                    </EditItemTemplate>
+                    <FooterTemplate>
+                        <asp:TextBox ID="txtPasswordFooter" runat="server"></asp:TextBox>
+                    </FooterTemplate>
+                </asp:TemplateField>
+
+                <%--For actons on User--%> 
+
+                <asp:TemplateField>
+
+                    <ItemTemplate>
+                        <asp:ImageButton ImageUrl="assets/icon/edit.png" runat="server" CommandName="Edit" ToolTip="Edit" />
+                        <asp:ImageButton ImageUrl="assets/icon/delete.png" runat="server" CommandName="Delete" ToolTip="Delete" />
+                    </ItemTemplate>
+
+                    <EditItemTemplate>
+                         <asp:ImageButton ImageUrl="assets/icon/save.png" runat="server" CommandName="Update" ToolTip="Update" />
+                        <asp:ImageButton ImageUrl="assets/icon/cancel.png" runat="server" CommandName="Cancel" ToolTip="Cancel" />
+                    </EditItemTemplate>
+
+                    <FooterTemplate>
+                        <asp:ImageButton ImageUrl="assets/icon/add.png" runat="server" CommandName="Addnew" ToolTip="Add new" />
+                    </FooterTemplate>
+
+                </asp:TemplateField>
 
             </Columns>
 
         </asp:GridView>
+
+            </br>
+            <asp:Label ID="successmessage" runat="server" Text="" ForeColor="Green"></asp:Label>
+
+            </br>
+            <asp:Label ID="errormessage" runat="server" Text="" ForeColor="Red"></asp:Label>
+
+        </div>
 
     </form>
 </body>

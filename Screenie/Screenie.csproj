@@ -67,8 +67,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\icon\add.png" />
     <Content Include="assets\icon\android.png" />
     <Content Include="assets\icon\apple.png" />
+    <Content Include="assets\icon\cancel.png" />
+    <Content Include="assets\icon\delete.png" />
+    <Content Include="assets\icon\edit.png" />
+    <Content Include="assets\icon\save.png" />
     <Content Include="assets\icon\screenie_icon.png" />
     <Content Include="assets\icon\user.png" />
     <Content Include="assets\img\bg%402x.jpg" />
