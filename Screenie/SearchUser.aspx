@@ -55,20 +55,22 @@
                     </div>
                 </div>
             </div>
+
             <div style="margin-top:25px;">
-                <asp:GridView ID="gvsearch" runat="server" CssClass="container" cellpadding="10" AutoGenerateColumns="False" ShowHeaderWhenEmpty="True" EmptyDataText="No Record Found...!" >
-                       <%-- Theme Properties --%>
-                <FooterStyle BackColor="White" ForeColor="#000066" />
-                <HeaderStyle HorizontalAlign="center" BackColor="#006AFF" Font-Bold="True" ForeColor="White" />
-                <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
-                <RowStyle HorizontalAlign="center" ForeColor="#000066"/>
-                <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
-                <SortedAscendingCellStyle BackColor="#F1F1F1" />
-                <SortedAscendingHeaderStyle BackColor="#007DBB" />
-                <SortedDescendingCellStyle BackColor="#CAC9C9" />
-                <SortedDescendingHeaderStyle BackColor="#00547E" />
+                <asp:gridview id="gvsearch" runat="server" cssclass="container" cellpadding="10" showheaderwhenempty="true" emptydatatext="No record found...!" >
+                   
+                <EmptyDataRowStyle HorizontalAlign="Center" ForeColor="Red" />   
+                <footerstyle backcolor="white" forecolor="#000066" />
+                <headerstyle horizontalalign="center" backcolor="#006aff" font-bold="true" forecolor="white" />
+                <pagerstyle backcolor="white" forecolor="#000066" horizontalalign="left" />
+                <rowstyle horizontalalign="center" forecolor="#000066"/>
+                <selectedrowstyle backcolor="#669999" font-bold="true" forecolor="white" />
+                <sortedascendingcellstyle backcolor="#f1f1f1" />
+                <sortedascendingheaderstyle backcolor="#007dbb" />
+                <sorteddescendingcellstyle backcolor="#cac9c9" />
+                <sorteddescendingheaderstyle backcolor="#00547e" />
                
-            </asp:GridView>
+            </asp:gridview>
                
             </div>
         </div>

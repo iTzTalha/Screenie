@@ -12,11 +12,13 @@ namespace Screenie
 {
     public partial class SearchUser : System.Web.UI.Page
     {
-        string strcon = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                gvsearch.Visible = false;
+            }
         }
 
         protected void LinkButton1_Click(object sender, EventArgs e)
@@ -41,13 +43,14 @@ namespace Screenie
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            string strcon = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
             SqlConnection con = new SqlConnection(strcon);
             con.Open();
             SqlCommand sqlcmd = new SqlCommand();
             String sqlquery = "SELECT * FROM Registration WHERE Email Like '%'+@Email+'%'";
             sqlcmd.CommandText = sqlquery;
             sqlcmd.Connection = con;
-            sqlcmd.Parameters.AddWithValue("Email", TextBox10.Text);
+            sqlcmd.Parameters.AddWithValue("Email", TextBox10.Text.Trim());
             DataTable dtbl = new DataTable();
             SqlDataAdapter sadp = new SqlDataAdapter(sqlcmd);
             sadp.Fill(dtbl);
