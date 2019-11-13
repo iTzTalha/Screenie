@@ -68,13 +68,14 @@ namespace Screenie
                 {
                     SqlConnection con = new SqlConnection(strcon);
                     con.Open();
-                    String query = "INSERT INTO Registration (Username,Email,Birth_Date,Gender,Password) VALUES (@Username,@Email,@Birth_Date,@Gender,@Password)";
+                    String query = "INSERT INTO Registration (Username,Email,Birth_Date,Gender,Password,Usertype) VALUES (@Username,@Email,@Birth_Date,@Gender,@Password,@Usertype)";
                     SqlCommand sqlcomd = new SqlCommand(query, con);
                     sqlcomd.Parameters.AddWithValue("@Username", (gvUsers.FooterRow.FindControl("txtUsernameFooter") as TextBox).Text.Trim());
                     sqlcomd.Parameters.AddWithValue("@Email", (gvUsers.FooterRow.FindControl("txtEmailFooter") as TextBox).Text.Trim());
                     sqlcomd.Parameters.AddWithValue("@Birth_Date", (gvUsers.FooterRow.FindControl("txtBirthDateFooter") as TextBox).Text.Trim());
                     sqlcomd.Parameters.AddWithValue("@Gender", (gvUsers.FooterRow.FindControl("txtGenderFooter") as TextBox).Text.Trim());
                     sqlcomd.Parameters.AddWithValue("@Password", (gvUsers.FooterRow.FindControl("txtPasswordFooter") as TextBox).Text.Trim());
+                    sqlcomd.Parameters.AddWithValue("@Usertype", (gvUsers.FooterRow.FindControl("txtUsertypeFooter") as TextBox).Text.Trim());
                     sqlcomd.ExecuteNonQuery();
                     populateGridView();
                     successmessage.Text = "New User added successfully";
@@ -130,13 +131,14 @@ namespace Screenie
                 using (SqlConnection con = new SqlConnection(strcon))
                 {
                     con.Open();
-                    String query = "UPDATE Registration SET Username=@Username,Email=@Email,Birth_Date=@Birth_Date,Gender=@Gender,Password=@Password WHERE RegistrationID=@id";
+                    String query = "UPDATE Registration SET Username=@Username,Email=@Email,Birth_Date=@Birth_Date,Gender=@Gender,Password=@Password,Usertype=@Usertype WHERE RegistrationID=@id";
                     SqlCommand sqlcomd = new SqlCommand(query, con);
                     sqlcomd.Parameters.AddWithValue("@Username", (gvUsers.Rows[e.RowIndex].FindControl("txtUsername") as TextBox).Text.Trim());
                     sqlcomd.Parameters.AddWithValue("@Email", (gvUsers.Rows[e.RowIndex].FindControl("txtEmail") as TextBox).Text.Trim());
                     sqlcomd.Parameters.AddWithValue("@Birth_Date", (gvUsers.Rows[e.RowIndex].FindControl("txtBirthDate") as TextBox).Text.Trim());
                     sqlcomd.Parameters.AddWithValue("@Gender", (gvUsers.Rows[e.RowIndex].FindControl("txtGender") as TextBox).Text.Trim());
                     sqlcomd.Parameters.AddWithValue("@Password", (gvUsers.Rows[e.RowIndex].FindControl("txtPassword") as TextBox).Text.Trim());
+                    sqlcomd.Parameters.AddWithValue("@Usertype", (gvUsers.Rows[e.RowIndex].FindControl("txtUsertype") as TextBox).Text.Trim());
                     sqlcomd.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[e.RowIndex].Value.ToString()));
                     sqlcomd.ExecuteNonQuery();
                     gvUsers.EditIndex = -1;
@@ -150,6 +152,11 @@ namespace Screenie
                 successmessage.Text = "";
                 errormessage.Text = ex.Message;
             }
+        }
+
+        protected void LinkButton3_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("SearchUser.aspx");
         }
     }
 }

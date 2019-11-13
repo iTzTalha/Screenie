@@ -15,15 +15,18 @@
         <div>
             <nav class="navbar navbar-expand-lg navbar-light">
                  <div class="collapse navbar-collapse" id="navbarSupportedContent">                    
-                     <p style="margin-top:20px;margin-left:30px;"> 
+                     <p style="margin-top:20px;margin-left:50px;"> 
                          <asp:LinkButton class="nav-link" ID="LinkButton1" runat="server" Font-Bold="True" Font-Names="Roboto" Font-Overline="False" ForeColor="#737373" Width="100%">View Users</asp:LinkButton>
+                     </p>
+                      <p style="margin-top:20px;margin-left:30px;"> 
+                         <asp:LinkButton class="nav-link" ID="LinkButton3" runat="server" Font-Bold="True" Font-Names="Roboto" Font-Overline="False" ForeColor="#737373" Width="100%" OnClick="LinkButton3_Click">Search Users</asp:LinkButton>
                      </p>
 
                      <p style="margin-top:20px;margin-left:30px;"> 
                          <asp:LinkButton class="nav-link" ID="LinkButton4" runat="server" Font-Bold="True" Font-Names="Roboto" Font-Overline="False" ForeColor="#737373" Width="100%" OnClick="LinkButton4_Click">Delete Users</asp:LinkButton>
                      </p>
 
-                      <p style="margin-top:20px;margin-left:1090px;"> 
+                      <p style="margin-top:20px;margin-left:900px;"> 
                          <asp:LinkButton class="nav-link" ID="LinkButton2" runat="server" Font-Bold="True" Font-Names="Roboto" Font-Overline="False" ForeColor="#737373" Width="100%" OnClick="LinkButton2_Click">Logout</asp:LinkButton>
                      </p>
 
@@ -118,6 +121,18 @@
                     </EditItemTemplate>
                     <FooterTemplate>
                         <asp:TextBox ID="txtPasswordFooter" runat="server"/>
+                    </FooterTemplate>
+                </asp:TemplateField>
+
+                  <asp:TemplateField HeaderText="User Type">
+                    <ItemTemplate>
+                        <asp:Label Text='<% #Eval("Usertype") %>' runat="server"/>
+                    </ItemTemplate>
+                    <EditItemTemplate>
+                        <asp:TextBox ID="txtUsertype" Text='<%# Eval("Usertype") %>' runat="server"/>
+                    </EditItemTemplate>
+                    <FooterTemplate>
+                        <asp:TextBox ID="txtUsertypeFooter" runat="server"/>
                     </FooterTemplate>
                 </asp:TemplateField>
 

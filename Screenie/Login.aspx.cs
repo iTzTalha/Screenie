@@ -28,32 +28,57 @@ namespace Screenie
                     con.Open();
 
                 }
-                SqlCommand cmd = new SqlCommand("select * from Registration where Email='" + TextBox1.Text.Trim() + "' AND Password='" + TextBox2.Text.Trim() + "'", con);
-                SqlDataReader dr = cmd.ExecuteReader();
-                String admin = TextBox1.Text.ToString();
-                String adminPass = TextBox2.Text.ToString();
-                if (dr.HasRows)
+
+                SqlDataAdapter sqladpt = new SqlDataAdapter("SELECT * FROM Registration WHERE Email = '"+TextBox1.Text.Trim()+ "' AND Password = '"+ TextBox2.Text.Trim() + "' AND Usertype = '"+DropDownList1.SelectedItem.ToString()+"'",con);
+                DataTable dt = new DataTable();
+                sqladpt.Fill(dt);
+                if (dt.Rows.Count > 0)
                 {
-                    if(admin == "admin@white.com" && adminPass == "admin")
+                    if (DropDownList1.SelectedIndex == 1)
                     {
-                        while (dr.Read())
-                        {
-                            Response.Redirect("DatabaseInfo.aspx");
-                        }
+                        Response.Write("<script>alert('User successfully logged in!')</script>");
                     }
-                    else
+                    else if (DropDownList1.SelectedIndex == 2)
                     {
-                        while (dr.Read())
-                        {
-                            Response.Write("<script>alert('Login successful');</script>");
-                        }
+                        Response.Write("<script>alert('You are logged in as Admin')</script>");
+                        Response.Redirect("DatabaseInfo.aspx");
                     }
-                    
+                    else if(DropDownList1.SelectedIndex == 0)
+                    {
+                        Response.Write("<script>alert('Invalid credential')</script>");
+                    }
                 }
                 else
                 {
-                    Response.Write("<script>alert('Invalid credentials');</script>");
+                    Response.Write("<script>alert('Invalid credential')</script>");
                 }
+                //SqlCommand cmd = new SqlCommand("select * from Registration where Email='" + TextBox1.Text.Trim() + "' AND Password='" + TextBox2.Text.Trim() + "'", con);
+                //SqlDataReader dr = cmd.ExecuteReader();
+                //String admin = TextBox1.Text.ToString();
+                //String adminPass = TextBox2.Text.ToString();
+                //if (dr.HasRows)
+                //{
+                //    if(admin == "admin@white.com" && adminPass == "admin")
+                //    {
+                //        while (dr.Read())
+                //        {
+                //            Response.Redirect("DatabaseInfo.aspx");
+                //        }
+                //    }
+                //    else
+                //    {
+                       
+                //        while (dr.Read())
+                //        {
+                //            Response.Write("<script>alert('Login successful');</script>");
+                //        }
+                //    }
+                    
+                //}
+                //else
+                //{
+                //    Response.Write("<script>alert('Invalid credentials');</script>");
+                //}
             }
             catch (Exception ex)
             {

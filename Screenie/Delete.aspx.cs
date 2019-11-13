@@ -47,5 +47,10 @@ namespace Screenie
         {
             Response.Redirect("DatabaseInfo.aspx");
         }
+
+        protected void LinkButton3_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("SearchUser.aspx");
+        }
     }
 }

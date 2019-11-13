@@ -35,16 +35,21 @@
                   <div class="row">
                      <div class="col">
                         <div class="form-group">
-                           <asp:TextBox Class="form-control form-control-lg" ID="TextBox1" runat="server" placeholder="Email address" TextMode="Email" Width="100%"></asp:TextBox>
+                           <asp:TextBox Class="form-control form-control-lg" ID="TextBox1" runat="server" placeholder=" Email address" TextMode="Email" Width="100%" Height="50px"></asp:TextBox>
                         </div>                      
                         <div class="form-group">
-                           <asp:TextBox Class="form-control form-control-lg" ID="TextBox2" runat="server" placeholder="Password" TextMode="Password" Width="100%"></asp:TextBox>
+                           <asp:TextBox Class="form-control form-control-lg" ID="TextBox2" runat="server" placeholder=" Password" TextMode="Password" Width="100%" Height="50px"></asp:TextBox>
                         </div>
-                         <div align="right">
-                             <div style="margin-bottom:8px;width:auto">
-                                <a href="Home.aspx">Forgot password?</a>
-                             </div>
-                         </div>                        
+                         <div style="margin-bottom:10px; align-content:center; align-items:center;">
+                            
+                                  <asp:DropDownList ID="DropDownList1" Width="150px" Height="30px" runat="server">
+                                      <asp:ListItem>Select User Type</asp:ListItem>
+                                     <asp:ListItem>User</asp:ListItem>
+                                     <asp:ListItem>Admin</asp:ListItem>
+                                 </asp:DropDownList>
+                             
+                                 <a href="Home.aspx" style="float:right">Forgot password?</a>
+                         </div>
                         <div class="form-group">
                            <asp:Button class="btn btn-primary btn-block btn-lg" type="button" ID="Button1" runat="server" Text="Login" OnClick="Button1_Click" />
                         </div>   

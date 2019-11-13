@@ -38,12 +38,12 @@
                          <label>Username&nbsp;</label>&nbsp;
                          <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox1" ErrorMessage="*Username is required." ForeColor="Red"></asp:RequiredFieldValidator>
                          <div class="form-group">
-                           <asp:TextBox CssClass="form-control form-control-lg" ID="TextBox1" runat="server" placeholder="Username" Width="100%"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control form-control-lg" ID="TextBox1" runat="server" placeholder=" Username" Width="100%" Height="50px"></asp:TextBox>
                         </div> 
                          <label>Email</label>&nbsp;&nbsp;
                          <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TextBox3" ErrorMessage="*Email is required." ForeColor="Red"></asp:RequiredFieldValidator>
 &nbsp;<div class="form-group">
-                           <asp:TextBox CssClass="form-control form-control-lg" ID="TextBox3" runat="server" placeholder="Email address" TextMode="Email" Width="100%"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control form-control-lg" ID="TextBox3" runat="server" placeholder=" Email address" TextMode="Email" Width="100%" Height="50px"></asp:TextBox>
                              <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBox3" ErrorMessage="Enter the valid email address." ForeColor="Red" Width="100%" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                         </div>                      
                          </div>
@@ -55,18 +55,18 @@
                         <label>Birth date&nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="TextBox5" ErrorMessage="*" ForeColor="Red" InitialValue="Select"></asp:RequiredFieldValidator>
                         </label>
                   <div class="form-group">
-                           <asp:TextBox CssClass="form-control form-control-lg" ID="TextBox5" runat="server" placeholder="MM/DD/YY" TextMode="Date" Width="100%"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control form-control-lg" ID="TextBox5" runat="server" placeholder=" MM/DD/YY" TextMode="Date" Width="100%" Height="50px"></asp:TextBox>
                         </div>  
                      </div>
                         <div class="col-md-6">
                         <label>Gender</label>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="DropDownList1" ErrorMessage="*" ForeColor="Red" InitialValue="Select"></asp:RequiredFieldValidator>
 &nbsp;<div class="form-group">
-                            <asp:DropDownList Class="form-control form-control-lg" ID="DropDownList1" runat="server" Width="100%">
-                                <asp:ListItem Text="Select" Value="select" />
-                                <asp:ListItem Text="Male" Value="Male" />
-                                <asp:ListItem Text="Female" Value="Female" />
-                                <asp:ListItem Text="Other" Value="Other" />
+                            <asp:DropDownList Class="form-control form-control-lg" ID="DropDownList1" runat="server" Width="100%" Height="50px">
+                                <asp:ListItem Text=" Select" Value="select" />
+                                <asp:ListItem Text=" Male" Value="Male" />
+                                <asp:ListItem Text=" Female" Value="Female" />
+                                <asp:ListItem Text=" Other" Value="Other" />
                             </asp:DropDownList>
                         </div>  
                      </div>
@@ -78,12 +78,12 @@
                          <label>Password&nbsp;&nbsp; </label>
                          <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="TextBox2" ErrorMessage="*Password is required." ForeColor="Red"></asp:RequiredFieldValidator>
 &nbsp;<div class="form-group">
-                           <asp:TextBox CssClass="form-control form-control-lg" ID="TextBox2" runat="server" placeholder="Password" TextMode="Password" Width="100%"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control form-control-lg" ID="TextBox2" runat="server" placeholder=" Password" TextMode="Password" Width="100%" Height="50px"></asp:TextBox>
                         </div> 
                          <label>Confirm password</label>
 &nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="TextBox4" ErrorMessage="*Password is required." ForeColor="Red"></asp:RequiredFieldValidator>
                          <div class="form-group">
-                           <asp:TextBox CssClass="form-control form-control-lg" ID="TextBox4" runat="server" placeholder="Confirm password" TextMode="Password" Width="100%"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control form-control-lg" ID="TextBox4" runat="server" placeholder=" Confirm password" TextMode="Password" Width="100%" Height="50px"></asp:TextBox>
                          <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="TextBox2" ControlToValidate="TextBox4" ErrorMessage="*Password doesn't match." ForeColor="Red"></asp:CompareValidator>
                         </div>  
                      </div>                     

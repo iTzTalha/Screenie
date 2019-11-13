@@ -82,6 +82,7 @@
     <Content Include="assets\icon\user.png" />
     <Content Include="assets\img\bg%402x.jpg" />
     <Content Include="assets\img\bg.jpg" />
+    <Content Include="assets\img\bg_1080p.png" />
     <Content Include="assets\img\chatappoverview.jpg" />
     <Content Include="assets\img\Web 1920 – 1%402x.png" />
     <Content Include="assets\img\Web 1920 – 1.png" />
@@ -1676,6 +1677,7 @@
     <Content Include="Login.aspx" />
     <Content Include="Delete.aspx" />
     <Content Include="Register.aspx" />
+    <Content Include="SearchUser.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -1714,6 +1716,13 @@
     </Compile>
     <Compile Include="Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchUser.aspx.cs">
+      <DependentUpon>SearchUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchUser.aspx.designer.cs">
+      <DependentUpon>SearchUser.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
