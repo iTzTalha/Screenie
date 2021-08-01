@@ -9,7 +9,7 @@ This is a clone of Netflix website built using HTML, CSS, Bootstrap, and JavaScr
 * Click the movie to see the description, reputation, complete title and more!
 * A Movie player!
 
-# What I Learned
+# What I Learned 📙
 * HTML
 * CSS
 * JavaScript
