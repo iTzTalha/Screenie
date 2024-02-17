@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://camo.githubusercontent.com/f49b5da57080b6dcc7304181e163262c3a11d0894858c2cc2f677be0fdb952ea/68747470733a2f2f6668736b6e696768746c6966652e636f6d2f77702d636f6e74656e742f75706c6f6164732f323032302f30342f755641535871764d7a795572415066536e39704d74784f4337733839756c7a64444b4264747143502e706e67">
+  <img src="https://github.com/jason-liu22/netflix-clone-react-typescript/raw/main/public/assets/netflix-logo.png" width="50%" height="50%">
 </p>
 <h1 align="center">Screenie (Netflix clone)</h1>
 This is a clone of a Netflix website built using HTML, CSS, Bootstrap, and JavaScript. It's not a replica, and it doesn't have all the features of the Netflix website. it's a similar version of Netflix with my design touch. It contains the home page, sign-in page, sign-up page, browse page, and movie player.
